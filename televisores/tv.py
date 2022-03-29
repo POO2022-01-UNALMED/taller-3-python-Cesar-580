@@ -38,7 +38,7 @@ class TV:
         self._canal = canal
     def getCanal(self):
         return self._canal
-
+    
     @classmethod
     def setNumTV(cls,numTv):
         cls._numTV = numTv
@@ -51,6 +51,11 @@ class TV:
     def turnOff(self):
         self._estado = False
     
+    # Estado
+    def getEstado(self):
+        return self._estado
+
+
     # CanalUp - CanalDown
     def canalUp(self):
         if ((self._estado) & (self._canal<120)):
