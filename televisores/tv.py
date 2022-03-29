@@ -35,7 +35,8 @@ class TV:
     
     # Canal
     def setCanal(self,canal):
-        self._canal = canal
+        if ((self._estado) and (canal < 120)):
+            self._canal = canal
     def getCanal(self):
         return self._canal
     
@@ -59,18 +60,18 @@ class TV:
 
     # CanalUp - CanalDown
     def canalUp(self):
-        if ((self._estado) & (self._canal<120)):
+        if ((self._estado) and (self._canal < 120)):
             self._canal += 1 
     def canalDown(self):
-        if ((self._estado) & (self._canal>1)):
+        if ((self._estado) and (self._canal>1)):
             self._canal -= 1
     
     # VolumenUp - VolumenDown
     def volumenUp(self):
-        if ((self._estado) & (self._volumen < 7)):
+        if ((self._estado) and (self._volumen < 7)):
             self._volumen += 1
     def volumenDo(self):
-        if ((self._estado) & (self._volumen > 0)):
+        if ((self._estado) and (self._volumen > 0)):
             self._volumen -= 1
 
     
