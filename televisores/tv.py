@@ -22,10 +22,10 @@ class TV:
         return self._control
 
     # Precio
-    def setPrecio(self,control):
-        self._control = control
+    def setPrecio(self,precio):
+        self._control = precio
     def getPrecio(self):
-        return self._control
+        return self._precio
     
     # Volumen
     def setVolumen(self,volumen):
@@ -40,8 +40,8 @@ class TV:
         return self._canal
     
     @classmethod
-    def setNumTV(cls,numTv):
-        cls._numTV = numTv
+    def setNumTV(cls,num):
+        cls._numTV = num
     def getNumTV(cls):
         return cls._numTV
 
